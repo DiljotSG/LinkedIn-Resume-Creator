@@ -1,11 +1,12 @@
-from linkedin import linkedin
+from bs4 import BeautifulSoup
+from selenium import webdriver
 
-API_KEY = ''
-API_SECRET = ''
-RETURN_URL = 'https://diljotsg.com/'
+driver = webdriver.Chrome("chromedriver.exe")
+profile_link = "https://www.linkedin.com/in/diljotsg/"
 
-authentication = linkedin.LinkedInAuthentication(API_KEY, API_SECRET, RETURN_URL)
-print authentication.authorization_url  # open this url on your browser
-application = linkedin.LinkedInApplication(authentication)
+driver.get(profile_link)
 
-application.get_profile()
+html = driver.page_source
+soup = BeautifulSoup(html, "html.parser")
+
+print(soup)
