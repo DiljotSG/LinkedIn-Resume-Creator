@@ -15,5 +15,6 @@
 		<level name="Maven: com.itextpdf:barcodes:7.0.2" value="project"/>
 		<level name="Maven: com.itextpdf:font-asian:7.0.2" value="project"/>
 		<level name="Maven: com.itextpdf:hyph:7.0.2" value="project"/>
+		<level name="core" value="project"/>
 	</levels>
 </component>

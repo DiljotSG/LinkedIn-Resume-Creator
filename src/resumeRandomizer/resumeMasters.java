@@ -23,7 +23,7 @@ public class resumeMasters {
 		
 		// Creating a PdfWriter
 		ResumeReader bob = new ResumeReader();
-		String dest = "/Users/KenzieVictoria/Documents/iTextExamples/sample.pdf";
+		String dest = "sample.pdf";
 		PdfWriter writer = new PdfWriter(dest);
 		
 		Random rand = new Random();
