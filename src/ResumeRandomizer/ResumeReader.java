@@ -1,11 +1,12 @@
-package resumeRandomizer;
+package ResumeRandomizer;
+
+import processing.data.JSONArray;
+import processing.data.JSONObject;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
-
-import processing.data.JSONObject;
-import processing.data.JSONArray;
 
 public class ResumeReader
 {
@@ -16,8 +17,9 @@ public class ResumeReader
 		String content = "";
 		try
 		{
-			//content = new Scanner(new File("resume-diljot.json")).useDelimiter("\\Z").next();
-			content = new Scanner(new File("resume.json")).useDelimiter("\\Z").next();
+			content = new Scanner(new File("resume-diljot.json")).useDelimiter("\\Z").next();
+			//content = new Scanner(new File("resume-james.json")).useDelimiter("\\Z").next();
+			//content = new Scanner(new File("resume.json")).useDelimiter("\\Z").next();
 		} catch(IOException e)
 		{
 			System.out.println(e);
@@ -94,7 +96,7 @@ public class ResumeReader
 
 		for(int i = 0; i < size; i++)
 		{
-			 result[i] = skills.getJSONObject(i).getString("name");
+			result[i] = skills.getJSONObject(i).getString("name");
 		}
 
 		return result;
@@ -134,7 +136,7 @@ public class ResumeReader
 		System.out.println(test.getSummary());
 		System.out.println(test.getNumWorkExperience());
 		System.out.println("Title: " + test.getWorkExperienceTitle(0));
-		System.out.println("Company: "+ test.getWorkExperienceCompany(0));
+		System.out.println("Company: " + test.getWorkExperienceCompany(0));
 		System.out.println(test.getNumEducation());
 		System.out.println(test.getEducationInstitution(0));
 		System.out.println(test.getEducationStudy(0));
