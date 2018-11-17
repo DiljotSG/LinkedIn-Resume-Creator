@@ -16,7 +16,7 @@ Created for the annual MLH Local Hack Day in December 2017! Winner of the Most I
 * Java 1.8
 * A .JSON file of your LinkedIn profile, generated using this [project](https://github.com/JMPerez/linkedin-to-json-resume)
 * [iText PDF 7](https://developers.itextpdf.com/downloads)
-* [Processing](https://processing.org/download/) (Found in this repository)
+* [Processing 3.3.6](https://processing.org/download/) (Found in this repository)
 
 ## Contributors
 <table>
