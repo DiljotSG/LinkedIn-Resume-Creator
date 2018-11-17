@@ -7,9 +7,9 @@ Created for the annual MLH Local Hack Day in December 2017! Winner of the Most I
 ## Usage instructions
 1. Clone this repo using `git clone https://github.com/DiljotSG/LinkedIn-Resume-Creator.git`
 2. Install the required dependencies.
-3. Use the code in this [Git Repo](https://github.com/JMPerez/linkedin-to-json-resume) to convert your LinkedIn profile archive to a JSON file. A working demoonstration of this JSON converter can be found [here](https://web.diljotsg.com/pfk/).
+3. Use the code in this [Git Repo](https://github.com/JMPerez/linkedin-to-json-resume) to convert your LinkedIn profile archive to a JSON file. A working demonstration of this JSON converter can be found [here](https://web.diljotsg.com/pfk/).
 4. Place the `resume.json` file at root of the project directory.
-5. Run the Main method in ResumeMasters.java.
+5. Run the Main method in ResumeMasters.java class.
 6. Open the sample.pdf file.
 
 ## Requirements
