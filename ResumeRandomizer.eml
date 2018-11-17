@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component LANGUAGE_LEVEL="JDK_1_8" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/target/test-classes"/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<excludeFolder url="file://$MODULE_DIR$/target"/>
+	</contentEntry>
+	<levels>
+		<level name="core" value="project"/>
+		<level name="Maven: com.itextpdf:kernel:7.0.2" value="project"/>
+		<level name="Maven: org.slf4j:slf4j-api:1.7.13" value="project"/>
+		<level name="Maven: com.itextpdf:io:7.0.2" value="project"/>
+		<level name="Maven: com.itextpdf:layout:7.0.2" value="project"/>
+		<level name="Maven: com.itextpdf:forms:7.0.2" value="project"/>
+		<level name="Maven: com.itextpdf:pdfa:7.0.2" value="project"/>
+		<level name="Maven: com.itextpdf:sign:7.0.2" value="project"/>
+		<level name="Maven: com.itextpdf:barcodes:7.0.2" value="project"/>
+		<level name="Maven: com.itextpdf:font-asian:7.0.2" value="project"/>
+		<level name="Maven: com.itextpdf:hyph:7.0.2" value="project"/>
+	</levels>
+</component>
