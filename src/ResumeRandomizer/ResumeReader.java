@@ -194,4 +194,4 @@ public class ResumeReader
 		System.out.println(test.getNumSkills());
 		System.out.println(Arrays.toString(test.getSkills()));
 	}
-}
+}//Resume Reader Class
