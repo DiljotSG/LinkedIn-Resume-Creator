@@ -1,3 +1,4 @@
+//Package and import statements
 package ResumeRandomizer;
 
 import com.itextpdf.io.font.FontConstants;
@@ -13,12 +14,24 @@ import com.itextpdf.layout.element.Text;
 
 import java.util.Random;
 
+/**
+ * CLASS: ResumeMasters
+ * REMARKS: This class creates the PDF by directly interacting
+ * with the PDF creator library
+ *
+ * @author Diljot Garcha
+ * @author Mackenzie Plowman
+ * @author Mario Mendez
+ * @author Nicolas Connor
+ */
 public class ResumeMasters
 {
 
+	/**
+	 * Main method, parses the JSON and calls the ComponentCreator as needed and creates the PDF.
+	 */
 	public static void main(String args[]) throws Exception
 	{
-
 		// Creating a PdfWriter
 		ResumeReader bob = new ResumeReader();
 		String dest = "sample.pdf";

@@ -1,3 +1,4 @@
+//Package and import statements
 package ResumeRandomizer;
 
 import processing.data.JSONArray;
@@ -8,18 +9,29 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
+/**
+ * CLASS: ResumeReader
+ * REMARKS: This classes' main job is to read the given JSON file, and offer output.
+ *
+ * @author Diljot Garcha
+ * @author Mackenzie Plowman
+ * @author Mario Mendez
+ * @author Nicolas Connor
+ */
 public class ResumeReader
 {
+	//Instance variables
 	private JSONObject resume;
 
+	/**
+	 * The constructor for the ResumeReader object
+	 */
 	public ResumeReader()
 	{
 		String content = "";
 		try
 		{
-			content = new Scanner(new File("resume-diljot.json")).useDelimiter("\\Z").next();
-			//content = new Scanner(new File("resume-james.json")).useDelimiter("\\Z").next();
-			//content = new Scanner(new File("resume.json")).useDelimiter("\\Z").next();
+			content = new Scanner(new File("resume.json")).useDelimiter("\\Z").next();
 		} catch(IOException e)
 		{
 			System.out.println(e);
@@ -28,26 +40,41 @@ public class ResumeReader
 		resume = JSONObject.parse(content);
 	}
 
+	/**
+	 * @return The name of the person.
+	 */
 	public String getName()
 	{
 		return resume.getJSONObject("basics").getString("name");
 	}
 
+	/**
+	 * @return The label of the person.
+	 */
 	public String getLabel()
 	{
 		return resume.getJSONObject("basics").getString("label");
 	}
 
+	/**
+	 * @return The summary of the person.
+	 */
 	public String getSummary()
 	{
 		return resume.getJSONObject("basics").getString("summary");
 	}
 
+	/**
+	 * @return The number of work experiences of this person.
+	 */
 	public int getNumWorkExperience()
 	{
 		return resume.getJSONArray("work").size();
 	}
 
+	/**
+	 * @return The work experience details for a specific company.
+	 */
 	public String getWorkExperienceCompany(int num)
 	{
 		JSONArray work = resume.getJSONArray("work");
@@ -55,6 +82,9 @@ public class ResumeReader
 		return item.getString("company");
 	}
 
+	/**
+	 * @return The job title for this work experience.
+	 */
 	public String getWorkExperienceTitle(int num)
 	{
 		JSONArray work = resume.getJSONArray("work");
@@ -62,11 +92,17 @@ public class ResumeReader
 		return item.getString("summary");
 	}
 
+	/**
+	 * @return The number of educations for this person.
+	 */
 	public int getNumEducation()
 	{
 		return resume.getJSONArray("education").size();
 	}
 
+	/**
+	 * @return The name of this education.
+	 */
 	public String getEducationInstitution(int num)
 	{
 		JSONArray edu = resume.getJSONArray("education");
@@ -74,6 +110,9 @@ public class ResumeReader
 		return item.getString("institution");
 	}
 
+	/**
+	 * @return The details of this education.
+	 */
 	public String getEducationStudy(int num)
 	{
 		JSONArray edu = resume.getJSONArray("education");
@@ -81,18 +120,23 @@ public class ResumeReader
 		return item.getString("studyType");
 	}
 
+	/**
+	 * @return The number of skills for this person.
+	 */
 	public int getNumSkills()
 	{
 		return resume.getJSONArray("skills").size();
 	}
 
+	/**
+	 * @return A string array of their skills.
+	 */
 	public String[] getSkills()
 	{
 		int size = getNumSkills();
 		String[] result = new String[size];
 
 		JSONArray skills = resume.getJSONArray("skills");
-
 
 		for(int i = 0; i < size; i++)
 		{
@@ -102,11 +146,15 @@ public class ResumeReader
 		return result;
 	}
 
+	/**
+	 * @return The number of projects for this person.
+	 */
 	public int getNumProjects()
 	{
 		return resume.getJSONArray("projects").size();
 	}
 
+	// Abandoned methods due to lack of time
 	/*public String getProjectTitle(int num)
 	{
 		JSONArray projects = resume.getJSONArray("projects");
@@ -128,6 +176,9 @@ public class ResumeReader
 		return item.getString("name");
 	}*/
 
+	/**
+	 * A simple method to test the ResumeReader Class
+	 */
 	public static void main(String[] args)
 	{
 		ResumeReader test = new ResumeReader();
